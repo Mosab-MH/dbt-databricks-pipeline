@@ -3,9 +3,9 @@ sources:
     database: raw 
     schema: jobs
     tables:
-      - name: raw_jobs_postings
+      - name: raw_job_postings
         description: Raw job postings data from the source system.
-      - name: raw_jobs_skills
+      - name: raw_job_skills
         description: Raw job skills data from the source system.
-        
+
         
