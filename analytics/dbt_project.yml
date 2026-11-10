@@ -2,6 +2,23 @@ name: analytics
 
 profile: databricks
 
-clean-targets:
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:     # directories to be removed by dbt clean
   - "target"
   - "dbt_packages"
+
+models:
+  analytics:
+    staging:
+      +materialized: view
+      +schema: staging
+    intermediate:
+      +materialized: view
+      +schema: intermediate
+    marts:
+      +materialized: table
+      +schema: marts
