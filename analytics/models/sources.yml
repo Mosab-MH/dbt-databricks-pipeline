@@ -1,0 +1,11 @@
+sources:
+  - name: jobs 
+    database: raw 
+    schema: jobs
+    tables:
+      - name: raw_jobs_postings
+        description: Raw job postings data from the source system.
+      - name: raw_jobs_skills
+        description: Raw job skills data from the source system.
+        
+        
