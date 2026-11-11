@@ -22,7 +22,7 @@ cleaned AS (
         search_location
     FROM source
 )
-SELECT *
-FROM cleaned
+
+SELECT * FROM cleaned
 
 
