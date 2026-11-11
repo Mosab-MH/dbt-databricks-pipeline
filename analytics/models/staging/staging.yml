@@ -30,6 +30,12 @@ models:
         description: Raw relative posted time ('10 hours ago'), kept unparsed - search_date carries the time axis; parsing it is a supporter exercise.
       - name: job_salary
         description: Raw salary text, unparsed for now.
+      - name: salary_min
+        description: Minimum salary parsed from job_salary, or null if not parseable.
+      - name: salary_max
+        description: Maximum salary parsed from job_salary, or null if not parseable.
+      - name: salary_avg
+        description: Average salary parsed from job_salary, or null if not parseable.
       - name: has_no_degree_mentioned
         description: True when the posting's extensions mention "No degree mentioned".
       - name: has_health_insurance
