@@ -2,7 +2,7 @@ WITH source AS (
     SELECT * 
     FROM {{ source('jobs','raw_job_skills') }}
 ),
-cleand AS (
+cleaned AS (
     SELECT
         job_id,
         skill_id,
@@ -10,5 +10,5 @@ cleand AS (
     FROM source
 )
 
-SELECT * FROM cleand
+SELECT * FROM cleaned
     
