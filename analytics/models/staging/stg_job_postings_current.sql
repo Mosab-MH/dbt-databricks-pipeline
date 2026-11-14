@@ -1,11 +1,9 @@
 {{ config(materialized='ephemeral')}}
 SELECT 
-    job_id,
-    job_title,
-    company_name,
-    salary_min,
-    salary_max,
-    searched_at
+    *
 FROM {{ref('stg_job_postings')}}
-WHERE job_title = 'Senior Data Engineer'
- AND company_name = 'Fraser Health'
+WHERE search_date <=  CAST('{{ var('as_of', run_started_at)}}' AS DATE)
+QUALIFY ROW_NUMBER() OVER (
+    PARTITION BY job_id 
+    ORDER BY searched_at DESC 
+) = 1
