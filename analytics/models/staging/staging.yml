@@ -90,3 +90,4 @@ unit_tests:
           - {job_id: 1, salary_min: 100000, salary_max: 186000}
           - {job_id: 2, salary_min: 32.5, salary_max: 32.5}
           - {job_id: 3, salary_min: null, salary_max: null}
+
